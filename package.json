@@ -1,0 +1,22 @@
+{
+  "name": "coder-camps-js",
+  "version": "0.0.0",
+  "description": "A MEAN stack application.",
+  "scripts": {
+    "start": "node ./bin/www",
+    "devStart": "nodemon ./bin/www"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
+    "dotenv": "^2.0.0",
+    "ejs": "^2.4.1",
+    "express": "^4.14.0",
+    "json-response": "0.0.2",
+    "mongoose": "^4.7.4",
+    "morgan": "^1.7.0",
+    "request": "^2.79.0",
+    "serve-favicon": "^2.3.0"
+  }
+}
