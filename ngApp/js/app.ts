@@ -11,8 +11,18 @@ namespace app {
       templateUrl: '/templates/home.html',
       controller: app.Controllers.HomeController,
       controllerAs: 'vm'
+    }).state('Login', {
+      url: '/login',
+      templateUrl: '/templates/login.html',
+      controller: app.Controllers.LoginController,
+      controllerAs: 'vm'
+    }).state('Register', {
+      url: '/register',
+      templateUrl: '/templates/register.html',
+      controller: app.Controllers.RegisterController,
+      controllerAs: 'vm'
     });
-    
+
     $urlRouterProvider.otherwise('/');
     $locationProvider.html5Mode(true);
   });
