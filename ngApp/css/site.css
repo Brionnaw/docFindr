@@ -1,0 +1,59 @@
+
+
+.navbar {
+  background-color: transparent;
+  opacity: 0.9;
+}
+
+.navbar-default .navbar-brand {
+  font-size: 30px;
+  color:black;
+  font-family:star avenue;
+
+}
+.navbar-default {
+     background-color: transparent;
+     border-color: transparent;
+}
+
+.speciality {
+  zoom:150%;
+  border-spacing: inherit;
+}
+.location{
+  zoom:150%;
+  border-spacing: inherit;
+
+}
+
+
+.background {
+  background-image: url('/images/o-BLACK-GIRL-READING-facebook.jpg');
+  width:102%;
+  height:1000px;
+  opacity: 0.8;
+  background-position: top;
+  background-repeat: no-repeat, repeat;
+  color:#000000;
+  zoom:70%
+}
+
+.title {
+  font-size:150px;
+  font-family:slant;
+  padding:80px 0px 0px 0px;
+  color:black;
+  zoom:100%;
+}
+.subTitle {
+  font-size:45px;
+  color:black;
+  padding:125px 0px 50px 0px;
+  zoom:130%;
+  font-family:star avenue;
+
+}
+
+.search {
+   zoom:100%
+}

@@ -22,6 +22,7 @@ namespace app.Controllers {
         constructor(
           private doctorService: app.Services.DoctorService,
         ) {
+          
     }
   }
   //login Controller

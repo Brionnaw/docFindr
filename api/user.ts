@@ -6,6 +6,7 @@ let passport = require('passport');
 let crypto = require('crypto');
 let jwt= require('jsonwebtoken');
 
+
 //MODEL
 let User = mongoose.model('User', {
   email: String,

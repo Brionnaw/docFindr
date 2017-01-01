@@ -1,38 +1,58 @@
 <!-- NAV SECTION (desktop/tablet)-->
-<nav class="navbar navbar-default navbar-fixed-top hidden-xs">
+ <nav class="navbar navbar-default navbar-fixed-top hidden-xs">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" ui-sref="#"><i class="fa fa-stethoscope"></i> Doc Findr</a>
     </div>
-    <ul class="nav navbar-nav navbar-right">
-      <!-- <li><a href="#services">Services</a></li>
+    <ul class="nav navbar-nav navbar-right ui basic huge buttons">
+       <!-- <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li> -->
-      <li><a ui-sref="Login">Login</a></li>
-      <li><a ui-sref="Register">Signup</a></li>
+       <li><a class="ui button" ui-sref="Login">Log in</a></li>
+        <div class="or"></div>
+      <li><a class="ui button" ui-sref="Register">Sign up</a></li>
+    </ul>
     </ul>
   </div>
 </nav>
 
+<!-- title(desktop)-->
+<div class="row background">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    <p class="text-center title">
+      <!-- <i class="fa fa-stethoscope"></i> Doc Findr</p> -->
+      <p class="text-center subTitle">
+        find nearby doctors in your network
+      </p>
+    </div>
+
+
+
 <!-- search-->
-<p class="text-center">
-  <input
-  type="text"
-  placeholder="Search by Speciality"
+<div class="text-center">
+   <div class="ui massive icon input">
+  <input type="text" placeholder="Search by Speciality" class="speciality"
   ng-model="vm.speciality">
-  <p class="text-center">
-    <input
+  <input type="text" placeholder="Enter Location" class="location"
+  ng-model="vm.location">
+  <button type="button" name="button" class="search ui black button">
+  <i class="search icon" ng-click="vm.search()"></i>find a doctor
+</button>
+</div>
+</div>
+    <!-- <input
     type="text"
     placeholder="Enter location"
-    ng-model="vm.location">
-  <button
-  type="button"
-  name="button"
-  class="btn btn-sm"
-  style="background-color:pink; color:white;"
-  ng-click="vm.search()">Find Doctor
-</button></p
-
+    ng-model="vm.location"
+    class="location">
+    <button
+    type="button"
+    name="button"
+    class="ui primary button"
+    ng-click="vm.search()">
+    <i class="fa fa-search" aria-hidden="true">Search</i>
+    </button>
+  </p> -->
 
 <!-- add login/sign-in -->
 <!-- add google maps -->
