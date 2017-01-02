@@ -25,7 +25,10 @@
   border-spacing: inherit;
 
 }
-
+.userPage{
+  padding: 100px 0px 0px 0px;
+  zoom:150%;
+}
 
 .background {
   background-image: url('/images/o-BLACK-GIRL-READING-facebook.jpg');
@@ -48,7 +51,7 @@
 .subTitle {
   font-size:45px;
   color:black;
-  padding:125px 0px 50px 0px;
+  padding:125px 70px 50px 0px;
   zoom:130%;
   font-family:star avenue;
 

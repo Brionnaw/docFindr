@@ -4,13 +4,13 @@
     <div class="navbar-header">
       <a class="navbar-brand" ui-sref="#"><i class="fa fa-stethoscope"></i> Doc Findr</a>
     </div>
-    <ul class="nav navbar-nav navbar-right ui basic huge buttons">
+    <ul class="nav navbar-nav navbar-right ui basic huge buttons" style="margin:5px 25px; 0px 0px">
        <!-- <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li> -->
-       <li><a class="ui button" ui-sref="Login">Log in</a></li>
+       <li><a class="ui button" ui-sref="Login">Login</a></li>
         <div class="or"></div>
-      <li><a class="ui button" ui-sref="Register">Sign up</a></li>
+      <li><a class="ui button" ui-sref="Register">Signup</a></li>
     </ul>
     </ul>
   </div>
@@ -35,7 +35,7 @@
   ng-model="vm.speciality">
   <input type="text" placeholder="Enter Location" class="location"
   ng-model="vm.location">
-  <button type="button" name="button" class="search ui black button">
+  <button type="button" name="button" class="search ui pink button">
   <i class="search icon" ng-click="vm.search()"></i>find a doctor
 </button>
 </div>

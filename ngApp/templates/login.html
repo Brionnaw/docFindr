@@ -2,17 +2,16 @@
 <nav class="navbar navbar-default navbar-fixed-top hidden-xs">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" ui-sref="LandingPage"><i class="fa fa-stethoscope"></i> Doc Findr </a>
+      <a class="navbar-brand" ui-sref="Home"><i class="fa fa-stethoscope"></i> Doc Findr </a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li><a ui-sref="Register">Signup</a></li>
+      <li><a class="ui pink basic button" ui-sref="Register" style="margin:5px 25px; 0px 0px">Signup</a></li>
     </ul>
   </div>
 </nav>
 
-
 <!-- nav(mobile)-->
-<nav class="navbar navbar-default navbar-fixed-top visible-xs">
+<!-- <nav class="navbar navbar-default navbar-fixed-top visible-xs">
   <div class="container" style="padding-left: 0px; color:#4d4d4d;">
     <span onclick="togglevisibility('foo')">
       <div class="dropdown">
@@ -24,16 +23,16 @@
       </span>
     </div>
   </div>
-</nav>
-
+</nav> -->
 
 <!-- LOG IN FORM -->
 <div class="row">
   <div class="col-xs-1 col-sm-1 col-md-3"></div>
   <form class="col-xs-10 col-sm-10 col-md-6 userPage">
-    <h3 class="page-header text-center">Login</h3>
+    <h3 class="page-header text-center">Login to your account</h3>
     <div class="form-group">
       <label>Username</label>
+        <i class="user icon"></i>
       <input
       type="text"
       class="form-control"
@@ -42,6 +41,7 @@
   </div>
   <div class="form-group">
     <label>Password</label>
+    <i class="lock icon"></i>
     <input
       type="text"
       class="form-control"
@@ -51,11 +51,12 @@
   <div class="form-group">
   <input
     type="submit"
-    class="btn btn-primary btn-block"
+    class="ui fluid large pink submit button"
     value="Login"
     ng-click="vm.login()">
-    Don't have an account?
-    <a ui-sref="Register" style="float:;">Sign up!</a>
+  <div class="ui message"> Dont have an account?
+    <a ui-sref="Register" style="float:;">Signup!</a>
+  </div>
   </div>
   </form>
   <div class="col-xs-1 col-sm-1 col-md-3"></div>
