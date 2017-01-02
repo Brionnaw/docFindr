@@ -29,17 +29,45 @@
 
 
 <!-- search-->
-<div class="text-center">
+  <div class="text-center">
    <div class="ui massive icon input">
   <input type="text" placeholder="Search by Speciality" class="speciality"
   ng-model="vm.speciality">
   <input type="text" placeholder="Enter Location" class="location"
   ng-model="vm.location">
-  <button type="button" name="button" class="search ui pink button">
-  <i class="search icon" ng-click="vm.search()"></i>find a doctor
+  <button type="button" name="button" class="search ui pink button" ng-click="vm.search()">
+  <i class="search icon"></i>find a doctor
 </button>
 </div>
 </div>
+</div>
+
+<!-- doctor results-->
+<!-- movie result-->
+<div class="row results">
+  <span ng-show="vm.doctorData">
+    <h1 class="text-center header">Results</h1>
+    <p class="text-center header2"> Showing results for {{vm.speciality}} in "{{vm.location}}"</p>
+    <div class="col-xs-1 col-sm-1 col-md-1"></div>
+    <div class="col-xs-11 col-sm-11 col-md-11">
+    <img ng-src={{vm.doctorData.data[1].profile.image_url}} >
+    <p><strong>{{vm.doctorData.data[1].specialties[0].actor}}</strong></p>
+    <p>{{vm.doctorData.data[1].specialties[0].description}}</p>
+      <p>{{vm.doctorData.data[1].profile.bio}}</p>
+    <p style="font-size:14px;"><strong>{{vm.doctorData.data[0].practices[0].name}}</strong></p>
+      <p>{{vm.doctorData.data[1].practices[0].visit_address.street}}
+      {{vm.doctorData.data[1].practices[0].visit_address.street2}},
+      {{vm.doctorData.data[1].practices[0].visit_address.city}},
+      {{vm.doctorData.data[1].practices[0].visit_address.state}}
+      {{vm.doctorData.data[1].practices[0].visit_address.zip}}</p>
+
+
+      <!-- <a ng-click=vm.goToWebsite(vm.movieData["imdbID"])> -->
+        <!-- <img ng-src={{vm.movieData["Poster"]}} alt={{vm.movieData["Title"]}} > -->
+      <!-- </a>       -->
+    </span>
+  </div>
+  </div>
     <!-- <input
     type="text"
     placeholder="Enter location"

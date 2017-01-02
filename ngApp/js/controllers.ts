@@ -14,7 +14,7 @@ namespace app.Controllers {
            alert(res.message)
          } else
            this.doctorData = (JSON.parse(res.body));
-           console.log(res)
+           console.log(res.body)
        }
      )
 
@@ -22,7 +22,7 @@ namespace app.Controllers {
         constructor(
           private doctorService: app.Services.DoctorService,
         ) {
-          
+
     }
   }
   //login Controller

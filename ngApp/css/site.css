@@ -1,4 +1,6 @@
-
+/*body{
+  font-family:kievit-slab-book,Georgia,serif;
+}*/
 
 .navbar {
   background-color: transparent;
@@ -59,4 +61,33 @@
 
 .search {
    zoom:100%
+}
+
+a {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.header {
+  font-size: 50px;
+  font-family:mayeka;
+}
+
+.header2 {
+  font-size: 20px;
+  font-family:mayeka;
+  padding-bottom: 30px;
+}
+.results {
+  padding: 10px 0px 50px 10px;
+}
+
+.footer {
+  width:102.5%;
+  height:100px;
+  font-size:18px;
+  padding-top:40px;
+  color:white;
+  background-color:lightgray;
+  opacity: 0.8;
 }
