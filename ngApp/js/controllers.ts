@@ -32,6 +32,42 @@ namespace app.Controllers {
 
     }
   }
+
+  export class LandingPageController {
+    public speciality;
+    public location;
+    public doctorData
+    public search (){
+      let info = {
+        speciality:this.speciality,
+        location:this.location,
+      }
+      console.log(info)
+        this.doctorService.getDoctor(info).then((res) => {
+          if (res.message === 'search not found') {
+           alert(res.message)
+         } else
+           this.doctorData = (JSON.parse(res.body));
+           console.log(res.body)
+       }
+     )
+
+    }
+    public goToReviews(provider_uid) {
+     console.log(this.$location.url)
+     this.$window.location.href = 'http://www.yelp.com/biz/'+ provider_uid;
+   }
+
+        constructor(
+          private doctorService: app.Services.DoctorService,
+          public $window: ng.IWindowService,
+          public $location:ng.ILocationService
+        ) {
+
+    }
+  }
+
+
   //login Controller
   export class LoginController {
     public user;

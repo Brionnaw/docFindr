@@ -7,9 +7,14 @@ namespace app {
     $urlRouterProvider: ng.ui.IUrlRouterProvider) => {
 
     $stateProvider.state('Home', {
-      url: '/',
+      url: '/home',
       templateUrl: '/templates/home.html',
       controller: app.Controllers.HomeController,
+      controllerAs: 'vm'
+    }).state('LandingPage', {
+      url: '/',
+      templateUrl: '/templates/landingPage.html',
+      controller: app.Controllers.LandingPageController,
       controllerAs: 'vm'
     }).state('Login', {
       url: '/login',
