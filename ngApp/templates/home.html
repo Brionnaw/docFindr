@@ -60,14 +60,24 @@
       {{vm.doctorData.data[1].practices[0].visit_address.city}},
       {{vm.doctorData.data[1].practices[0].visit_address.state}}
       {{vm.doctorData.data[1].practices[0].visit_address.zip}}</p>
+  </div>
+  <div class="col-xs-11 col-sm-11 col-md-11">
+    <img ng-src={{vm.doctorData.data[1].practices[1].profile}} >
+    {{vm.doctorData.data[1].profile[1]}} 
+      <p>{{vm.doctorData.data[1].practices[1].name}}</p>
+      <p>{{vm.doctorData.data[1].practices[1].profile.bio}}</p>
+  <p>{{vm.doctorData.data[1].practices[1].visit_address.street}},
+    {{vm.doctorData.data[1].practices[0].visit_address.street2}}
+    {{vm.doctorData.data[1].practices[1].visit_address.city}},
+    {{vm.doctorData.data[1].practices[1].visit_address.state}}
+    {{vm.doctorData.data[1].practices[1].visit_address.zip}}
+  </p>
+</div>
+</span>
+  </div>
 
 
-      <!-- <a ng-click=vm.goToWebsite(vm.movieData["imdbID"])> -->
-        <!-- <img ng-src={{vm.movieData["Poster"]}} alt={{vm.movieData["Title"]}} > -->
-      <!-- </a>       -->
-    </span>
-  </div>
-  </div>
+
     <!-- <input
     type="text"
     placeholder="Enter location"
