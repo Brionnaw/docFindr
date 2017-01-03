@@ -50,31 +50,78 @@
     <p class="text-center header2"> Showing results for {{vm.speciality}} in "{{vm.location}}"</p>
     <div class="col-xs-1 col-sm-1 col-md-1"></div>
     <div class="col-xs-11 col-sm-11 col-md-11">
-    <img ng-src={{vm.doctorData.data[1].profile.image_url}} >
-    <p><strong>{{vm.doctorData.data[1].specialties[0].actor}}</strong></p>
-    <p>{{vm.doctorData.data[1].specialties[0].description}}</p>
-      <p>{{vm.doctorData.data[1].profile.bio}}</p>
-    <p style="font-size:14px;"><strong>{{vm.doctorData.data[0].practices[0].name}}</strong></p>
-      <p>{{vm.doctorData.data[1].practices[0].visit_address.street}}
-      {{vm.doctorData.data[1].practices[0].visit_address.street2}},
-      {{vm.doctorData.data[1].practices[0].visit_address.city}},
-      {{vm.doctorData.data[1].practices[0].visit_address.state}}
-      {{vm.doctorData.data[1].practices[0].visit_address.zip}}</p>
+    <img ng-src={{vm.doctorData.data[0].profile.image_url}} >
+    <!-- ratings-->
+    <p>
+        <a ng-click=vm.goToReviews(vm.doctorData.data[0].ratings[0].provider_uid)>
+      <img ng-src={{vm.doctorData.data[0].ratings[1].image_url_small}}>
+    </a>
+    </p>
+    <p><strong>{{vm.doctorData.data[0].practices[0].name}}</strong></p>
+    <p>
+      <strong>
+      {{vm.doctorData.data[0].specialties[0].actor}}
+    </strong>
+  </p>
+    <p>
+      {{vm.doctorData.data[0].specialties[0].description}}
+    </p>
+    {{vm.doctorData.data[0].profile.bio}}
+    <p style="font-size:14px;">
+    </p>
+    <p>
+      {{vm.doctorData.data[0].practices[0].visit_address.street}},
+      {{vm.doctorData.data[0].practices[0].visit_address.street2}}
+      {{vm.doctorData.data[0].practices[0].visit_address.city}},
+      {{vm.doctorData.data[0].practices[0].visit_address.state}}
+      {{vm.doctorData.data[0].practices[0].visit_address.zip}}
+    </p>
   </div>
+  <div class="col-xs-1 col-sm-1 col-md-1"></div>
   <div class="col-xs-11 col-sm-11 col-md-11">
-    <img ng-src={{vm.doctorData.data[1].practices[1].profile}} >
-    {{vm.doctorData.data[1].profile[1]}} 
-      <p>{{vm.doctorData.data[1].practices[1].name}}</p>
-      <p>{{vm.doctorData.data[1].practices[1].profile.bio}}</p>
-  <p>{{vm.doctorData.data[1].practices[1].visit_address.street}},
-    {{vm.doctorData.data[1].practices[0].visit_address.street2}}
+    <img ng-src={{vm.doctorData.data[1].profile.image_url}} >
+    <!-- ratings-->
+    <p>
+        <a ng-click=vm.goToReviews(vm.doctorData.data[1].ratings[0].provider_uid)>
+      <img ng-src={{vm.doctorData.data[1].ratings.image_url_small}}>
+    </a>
+    </p>
+       <p><strong>{{vm.doctorData.data[1].practices[1].name}}</strong></p>
+    <p><strong>{{vm.doctorData.data[1].specialties[0].actor}}</strong></p>
+    <p>  {{vm.doctorData.data[1].specialties[0].description}}</p>
+      <p>{{vm.doctorData.data[1].profile.bio}}</p>
+      <p>
+    {{vm.doctorData.data[1].practices[1].visit_address.street}},
+    {{vm.doctorData.data[1].practices[1].visit_address.street2}}
     {{vm.doctorData.data[1].practices[1].visit_address.city}},
     {{vm.doctorData.data[1].practices[1].visit_address.state}}
     {{vm.doctorData.data[1].practices[1].visit_address.zip}}
   </p>
 </div>
+
+<div class="col-xs-1 col-sm-1 col-md-1"></div>
+<div class="col-xs-11 col-sm-11 col-md-11">
+  <img ng-src={{vm.doctorData.data[2].profile.image_url}} >
+  <!-- ratings-->
+  <p>
+      <a ng-click=vm.goToReviews(vm.doctorData.data[2].ratings[0].provider_uid)>
+    <img ng-src={{vm.doctorData.data[2].ratings[1].image_url_small}}>
+  </a>
+  </p>
+     <p><strong>{{vm.doctorData.data[2].practices[0].name}}</strong></p>
+  <p><strong>{{vm.doctorData.data[2].specialties[0].actor}}</strong></p>
+  <p>  {{vm.doctorData.data[2].specialties[0].description}}</p>
+    <p>{{vm.doctorData.data[2].profile.bio}}</p>
+<p>
+{{vm.doctorData.data[2].practices[0].visit_address.street}},
+{{vm.doctorData.data[2].practices[0].visit_address.street2}}
+{{vm.doctorData.data[2].practices[0].visit_address.city}},
+{{vm.doctorData.data[2].practices[0].visit_address.state}}
+{{vm.doctorData.data[2].practices[0].visit_address.zip}}
+</p>
+
 </span>
-  </div>
+</div>
 
 
 

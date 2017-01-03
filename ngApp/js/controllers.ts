@@ -19,8 +19,15 @@ namespace app.Controllers {
      )
 
     }
+    public goToReviews(provider_uid) {
+     console.log(this.$location.url)
+     this.$window.location.href = 'http://www.yelp.com/biz/'+ provider_uid;
+   }
+
         constructor(
           private doctorService: app.Services.DoctorService,
+          public $window: ng.IWindowService,
+          public $location:ng.ILocationService
         ) {
 
     }
