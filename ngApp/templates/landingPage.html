@@ -1,20 +1,35 @@
 <!-- NAV SECTION (desktop/tablet)-->
- <nav class="navbar navbar-default navbar-fixed-top hidden-xs">
+   <!-- <nav class="navbar navbar-default navbar-fixed-top hidden-xs">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" ui-sref="#"><i class="fa fa-stethoscope"></i> Doc Findr</a>
     </div>
     <ul class="nav navbar-nav navbar-right ui basic huge buttons" style="margin:5px 25px; 0px 0px">
-       <!-- <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li> -->
+
        <li><a class="ui button" ui-sref="Login">Login</a></li>
         <div class="or"></div>
       <li><a class="ui button" ui-sref="Register">Signup</a></li>
     </ul>
     </ul>
   </div>
-</nav>
+</nav> -->
+<div class="pusher">
+  <div class="ui inverted vertical masthead center aligned segment">
+        <div class="ui container">
+      <div class="ui large secondary inverted pointing menu">
+        <a class="item" href="/" style="font-size:20px; margin-right:40px;"> <i class="fa fa-stethoscope"></i>  Doc Findr</a>
+        <a class="active item">Home</a>
+        <a class="item" href="#about">About</a>
+        <a class="item" href="#services">Services</a>
+        <div class="right item">
+          <a class="ui inverted button" ui-sref="Login" style="margin-right:10px;">Log in</a>
+          <a class="ui inverted button" ui-sref="Register">Sign Up</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+
 
 <!-- title(desktop)-->
 <div class="row background">
@@ -35,7 +50,7 @@
   ng-model="vm.speciality">
   <input type="text" placeholder="Enter Location" class="location"
   ng-model="vm.location">
-  <button type="button" name="button" class="search ui pink button" ng-click="vm.search()">
+  <button type="button" name="button" class="search ui black  button" ng-click="vm.search()">
   <i class="search icon"></i>find a doctor
 </button>
 </div>
@@ -182,40 +197,54 @@
 
         <!-- SERVICES -->
         <span ng-hide="vm.doctorData">
-<div class="ui vertical stripe segment">
-  <div class="ui middle aligned stackable grid container">
-    <div class="row">
-      <div class="eight wide column">
+        <h1 class="ui header text-center" id="about">Discover the best doctors in your network!</h1>
+        <center><p><b>Doc Findr</b> provides you with basic professional information on licensed physician in the United States.</p></center>
+        <div class="ui vertical stripe segment">
+          <div class="ui middle aligned stackable grid container">
+            <div class="row">
+              <!-- <div class="eight wide column">
         <h3 class="ui header">We Help Find The Right Healthcare For You.</h3>
         <p>DoctorFindr provides you with basic professional information on licensed physician in the United States.</p>
         <h3 class="ui header">We Make Bananas That Can Dance</h3>
         <p>Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.</p>
+      </div> -->
+      <div class="four wide right floated column">
+        <img src="/images/Screen Shot 2017-01-10 at 11.08.12 PM.png" class="ui large bordered rounded image">
       </div>
-      <div class="six wide right floated column">
-        <img src="/images/doctorprofile.png" class="ui large bordered rounded image">
+      <div class="four wide right floated column">
+        <img src="/images/nurseblk.jpg" class="ui large bordered rounded image">
+      </div>
+      <div class="four wide right floated column">
+        <img src="/images/doc.jpg" class="ui large bordered rounded image">
       </div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
       <div class="center aligned column">
         <a class="ui huge button">Check Them Out</a>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
-<div class="ui vertical stripe quote segment">
+
+<!--services-->
+<div class="ui vertical stripe quote segment" id="services">
     <div class="ui equal width stackable internally celled grid">
       <div class="center aligned row">
         <div class="column">
           <h1><i class="fa fa-search fa-lg" aria-hidden="true"></i></h1>
           <h3> Real Data Information</h3>
-          <p>You can easily search for doctors by name, location, specialty, and insurances. Using the Doc Findr database, you can improve healthcare by reimagining how consumers search and find the right doctor.</p>
+          <p>You can easily search for doctors by name, location, specialty, and insurances. Using the Doc Findr database, you can improve your healthcare by finding the right doctor.</p>
+        <center>  <img src="/images/doctorprofile.png" class="ui large bordered rounded image"></center>
         </div>
         <div class="column">
           <h1><i class="fa fa-user-md fa-lg" aria-hidden="true"></i></h1>
           <h3> Practices and providers</h3>
           <p>
-            <b>Doc Findr </b> makes it easy to get information about providers and practices right. Get full information on how providers work with one or more practices.
+            <b>Doc Findr </b> makes it easy to get information about providers and practices right.
+            <br /> Get full information on how providers work with one or more practices.
           </p>
+          <center><img src="/images/blkslide4.png" class="ui large bordered rounded image"></center>
+
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@
 .navbar {
   background-color: transparent;
   opacity: 0.9;
+
 }
 
 .navbar-default .navbar-brand {
@@ -33,10 +34,10 @@
 }
 
 .background {
-  background-image: url('/images/o-BLACK-GIRL-READING-facebook.jpg');
+  background-image: url('/images/www_huffingtonpost_com.jpg');
   width:102%;
   height:1000px;
-  opacity: 0.8;
+  opacity: 0.9;
   background-position: top;
   background-repeat: no-repeat, repeat;
   color:#000000;
@@ -53,14 +54,15 @@
 .subTitle {
   font-size:45px;
   color:black;
-  padding:125px 70px 50px 0px;
+  padding:125px 0px 50px 0px;
   zoom:130%;
   font-family:star avenue;
 
 }
 
 .search {
-   zoom:100%
+   zoom:100%;
+
 }
 
 a {
@@ -88,6 +90,6 @@ a {
   font-size:18px;
   padding-top:40px;
   color:white;
-  background-color:lightgray;
+  background-color:#1b1c1d;
   opacity: 0.8;
 }
