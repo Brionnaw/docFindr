@@ -3,6 +3,11 @@ namespace app.Controllers {
     public speciality;
     public location;
     public doctorData
+
+    public logout(){
+      window.localStorage.removeItem('token');
+      this.$state.go("Login");
+    }
     public search (){
       let info = {
         speciality:this.speciality,
@@ -25,6 +30,7 @@ namespace app.Controllers {
    }
 
         constructor(
+          public $state: ng.ui.IStateService,
           private doctorService: app.Services.DoctorService,
           public $window: ng.IWindowService,
           public $location:ng.ILocationService
