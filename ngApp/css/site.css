@@ -44,6 +44,16 @@
   zoom:70%
 }
 
+.background-home {
+  background-image: url('/images/couplesick.jpg');
+  width:102%;
+  height:1000px;
+  opacity: 0.9;
+  background-position: top;
+  background-repeat: no-repeat, repeat;
+  color:#000000;
+  zoom:70%
+}
 
 }
 .title {
