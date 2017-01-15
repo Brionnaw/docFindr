@@ -2,10 +2,10 @@
 <div class="pusher">
   <div class="ui inverted vertical masthead center aligned segment">
         <div class="ui container">
-      <div class="ui large secondary inverted pointing menu">
+          <div class="ui large secondary inverted pointing menu">
+            <a class="item" href="/" style="font-size:20px; margin-right:40px;"> <i class="fa fa-stethoscope"></i>  Doc Findr</a>
         <a class="active item">Home</a>
-        <a class="item" href="#about">About</a>
-        <a class="item" href="#services">Services</a>
+        <a class="item" href="">Settings</a>
         <div class="right item">
           <a class="item" ng-click="vm.logout()" style="margin-right:10px;">Log Out</a>
         </div>
@@ -14,17 +14,23 @@
 </div>
 
 
-
-
+<div class="row background-home">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+      <!-- <i class="fa fa-stethoscope"></i> Doc Findr</p> -->
+      <p class="text-center subTitle-home">
+        Doc Findr
+      </p>
+    </div></div>
 <!-- search-->
-  <div class="text-center">
-   <div class="ui massive icon input">
-  <input type="text" placeholder="Search by Speciality" class="speciality"
-  ng-model="vm.speciality">
-  <input type="text" placeholder="Enter Location" class="location"
-  ng-model="vm.location">
-  <button type="button" name="button" class="search ui pink button" ng-click="vm.search()">
-  <i class="search icon"></i>find a doctor
+<br>
+<div class="text-center">
+  <div class="ui massive icon input">
+    <input type="text" placeholder="Search by Speciality" style="margin-right:20px" class=""
+    ng-model="vm.speciality">
+    <input type="text" placeholder="Enter Location" class=""
+    ng-model="vm.location">
+  <button type="button" name="button" style="margin-left:20px" class="search ui black button" ng-click="vm.search()">
+  <i class="search icon"></i>
 </button>
 </div>
 </div>
@@ -35,7 +41,6 @@
   <span ng-show="vm.doctorData">
     <h1 class="text-center header">Results</h1>
     <p class="text-center header2"> Showing results for {{vm.speciality}} in "{{vm.location}}"</p>
-
     <div class="col-xs-1 col-sm-1 col-md-1"></div>
     <div class="col-xs-11 col-sm-11 col-md-11">
       <div class="ui divided items">

@@ -44,6 +44,17 @@
   zoom:70%
 }
 
+
+.background-home {
+  background-image: url('/images/doc1.png');
+  width:100vw;
+  height:760px;
+  opacity: 0.9;
+  background-position: top;
+  background-repeat: no-repeat, repeat;
+  color:#000000;
+  zoom:70%
+}
 .title {
   font-size:150px;
   font-family:slant;
@@ -52,6 +63,14 @@
   zoom:100%;
 }
 .subTitle {
+  font-size:45px;
+  color:black;
+  padding:125px 0px 50px 0px;
+  zoom:130%;
+  font-family:star avenue;
+
+}
+.subTitle-home {
   font-size:45px;
   color:black;
   padding:125px 0px 50px 0px;
