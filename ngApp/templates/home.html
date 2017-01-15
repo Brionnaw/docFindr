@@ -5,6 +5,15 @@
           <div class="ui large secondary inverted pointing menu">
             <a class="item" href="/" style="font-size:20px; margin-right:40px;"> <i class="fa fa-stethoscope"></i>  Doc Findr</a>
         <a class="active item">Home</a>
+        <div class="ui simple dropdown item">
+          Find doctors by
+          <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item">City</a>
+        <a class="item">Speciality</a>
+        <a class="item">Insurance</a>
+      </div>
+    </div>
         <a class="item" href="">Settings</a>
         <div class="right item">
           <img class="ui avatar image" src="/images/iconuser1.png">
@@ -26,7 +35,7 @@
 <!-- search-->
 <br>
 <div class="text-center">
-  <select class="ui selection dropdown"  input type="text" ng-model="vm.speciality">
+  <select class="ui search selection dropdown" input type="text" ng-model="vm.speciality">
     <option value="">Speciality</option>
     <option value="Acupuncturists">Acupuncturists</option>
     <option value="Allergists">Allergists</option>
@@ -79,6 +88,7 @@
     <option value="Urgent Care Specialists">Urgent Care Specialists</option>
     <option value="Urologists">Urologists</option>
   </select>
+
 
   <!-- <div class="ui massive icon input">
     <input type="text" placeholder="Search by Speciality" style="margin-right:20px" class=""
