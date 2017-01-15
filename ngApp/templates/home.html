@@ -7,18 +7,20 @@
         <a class="active item">Home</a>
         <a class="item" href="">Settings</a>
         <div class="right item">
-          <a class="item" ng-click="vm.logout()" style="margin-right:10px;">Log Out</a>
+          <img class="ui avatar image" src="/images/usericon.png">
+          <p ui-sref="Home">{{vm.user[0].username}}</p>
+           <a class="item" ng-click="vm.logout()" style="margin-right:10px;">Log Out</a>
         </div>
       </div>
     </div>
 </div>
 
 
-<div class="row background-home">
+<div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12">
       <!-- <i class="fa fa-stethoscope"></i> Doc Findr</p> -->
       <p class="text-center subTitle-home">
-        Doc Findr
+        We Help Find The Right Healthcare For You.
       </p>
     </div></div>
 <!-- search-->
@@ -27,7 +29,7 @@
   <div class="ui massive icon input">
     <input type="text" placeholder="Search by Speciality" style="margin-right:20px" class=""
     ng-model="vm.speciality">
-    <input type="text" placeholder="Enter Location" class=""
+    <input type="text" placeholder="Enter State" class=""
     ng-model="vm.location">
   <button type="button" name="button" style="margin-left:20px" class="search ui black button" ng-click="vm.search()">
   <i class="search icon"></i>

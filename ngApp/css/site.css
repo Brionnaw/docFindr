@@ -45,15 +45,7 @@
 }
 
 
-.background-home {
-  background-image: url('/images/doc1.png');
-  width:100vw;
-  height:760px;
-  opacity: 0.9;
-  background-position: top;
-  background-repeat: no-repeat, repeat;
-  color:#000000;
-  zoom:70%
+
 }
 .title {
   font-size:150px;
@@ -71,7 +63,7 @@
 
 }
 .subTitle-home {
-  font-size:45px;
+  font-size:25px;
   color:black;
   padding:125px 0px 50px 0px;
   zoom:130%;

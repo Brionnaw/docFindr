@@ -3,7 +3,10 @@ namespace app.Controllers {
     public speciality;
     public location;
     public doctorData
-
+    public user;
+    public id;
+    public payload;
+    public username;
     public logout(){
       window.localStorage.removeItem('token');
       this.$state.go("Login");
@@ -30,11 +33,16 @@ namespace app.Controllers {
    }
 
         constructor(
-          public $state: ng.ui.IStateService,
           private doctorService: app.Services.DoctorService,
+          private userService: app.Services.UserService,
+          public $state: ng.ui.IStateService,
           public $window: ng.IWindowService,
           public $location:ng.ILocationService
         ) {
+          let token = window.localStorage["token"];
+          let payload = JSON.parse(window.atob(token.split('.')[1]));
+          this.id = payload.id;
+          this.user = this.userService.getUser();
 
     }
   }
