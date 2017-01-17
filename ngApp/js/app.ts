@@ -26,6 +26,11 @@ namespace app {
       templateUrl: '/templates/register.html',
       controller: app.Controllers.RegisterController,
       controllerAs: 'vm'
+    }).state('NameSearch', {
+      url: '/nameSearch',
+      templateUrl: '/templates/nameSearch.html',
+      controller: app.Controllers.NameSearchController,
+      controllerAs: 'vm'
     });
 
     $urlRouterProvider.otherwise('/');

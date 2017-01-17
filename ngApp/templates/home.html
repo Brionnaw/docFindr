@@ -3,14 +3,14 @@
   <div class="ui inverted vertical masthead center aligned segment">
         <div class="ui container">
           <div class="ui large secondary inverted pointing menu">
-            <a class="item" href="/" style="font-size:20px; margin-right:40px;"> <i class="fa fa-stethoscope"></i>  Doc Findr</a>
+            <a class="item" href="/" style="font-size:20px; margin-right:40px;"> <i class="fa fa-stethoscope"></i> Doc Findr</a>
         <a class="active item">Home</a>
         <div class="ui simple dropdown item">
           Find doctors by
           <i class="dropdown icon"></i>
       <div class="menu">
-        <a class="item">Name</a>
-        <a class="item">Specialities</a>
+        <a class="item" ui-sref="NameSearch">Name</a>
+        <a class="item">Specialty</a>
         <a class="item">Insurance</a>
       </div>
     </div>
@@ -24,19 +24,17 @@
     </div>
 </div>
 
-
-<div class="row background-home">
+<div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12">
-      <!-- <i class="fa fa-stethoscope"></i> Doc Findr</p> -->
-      <p class="text-center subTitle-home">
-        We Help Find The Right Healthcare For You.
-      </p>
-    </div></div>
+      <p class="text-center subTitle-home">We Help Find The Right Healthcare For You</p>
+      <p class="text-center" style="font-size:25px">Find Doctors by specialty</p>
+    </div>
+  </div>
 <!-- search-->
 <br>
 <div class="text-center">
   <select class="ui search selection dropdown" input type="text" ng-model="vm.speciality">
-    <option value="">Speciality</option>
+    <option value="">Specialty</option>
     <option value="Acupuncturists">Acupuncturists</option>
     <option value="Allergists">Allergists</option>
     <option value="Audiologists">Audiologists</option>
@@ -148,16 +146,13 @@
       <option value="WI">Wisconsin</option>
       <option value="WY">Wyoming</option>
     </select>
-  <button type="button" name="button" style="margin-left:20px" class="search ui black button" ng-click="vm.search()">
-  <i class="search icon"></i>
-</button>
-</div>
-</div>
-</div>
-
-
-
-
+    <button type="button" name="button" style="margin-left:20px" class="search ui black button" ng-click="vm.search()">
+      <i class="search icon"></i>
+    </button>
+    <br>
+    <br><a ui-sref="NameSearch" style="color:#000"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> SEARCH BY NAME </a>
+    </div>
+  </div>
 
 <!-- add a loader-->
 <!-- doctor results-->

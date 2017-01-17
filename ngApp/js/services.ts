@@ -38,15 +38,22 @@ namespace app.Services {
 // doctor service
  export class DoctorService {
    public DoctorResource;
+   public NameResource;
    public getDoctor(getInfo) {
      console.log(getInfo)
      return this.DoctorResource.save(getInfo).$promise
+   }
+   public getName(getInfo) {
+     console.log(getInfo)
+     return this.NameResource.save(getInfo).$promise
    }
    constructor(
      $resource:ng.resource.IResourceService,
      public $state:ng.ui.IStateService
    ){
-       this.DoctorResource = $resource('api/doctor');
+     this.DoctorResource = $resource('api/doctor');
+     this.NameResource = $resource('api/doctor/name');
+
    }
  }
  angular.module('app').service('userService', UserService);
