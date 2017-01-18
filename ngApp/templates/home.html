@@ -1,12 +1,12 @@
 <!-- NAV SECTION (desktop/tablet)-->
-<div class="pusher">
+<div class="pusher hidden-xs">
   <div class="ui inverted vertical masthead center aligned segment">
         <div class="ui container">
           <div class="ui large secondary inverted pointing menu">
             <a class="item" href="/" style="font-size:20px; margin-right:40px;"> <i class="fa fa-stethoscope"></i> Doc Findr</a>
         <a class="active item" ui-sref="Home">Home</a>
         <a class="item" ui-sref="NameSearch">Search by Name</a>
-        <a class="item" ui-sref="InsuranceSearch">Search by Insurance</a>
+        <a class="item" ui-sref="InsuranceSearch">Search by Name</a>
         <div class="right item">
           <img class="ui avatar image" src="/images/iconuser1.png">
           <a ui-sref="Home">{{vm.user[0].username}}</a>
@@ -14,18 +14,38 @@
         </div>
       </div>
     </div>
+  </div>
 </div>
+
+
+<!-- nav(mobile)-->
+<nav class="navbar navbar-default navbar-fixed-top visible-xs" style="background-color: white;">
+  <div class="container" style="padding-left: 0px; color:#4d4d4d;">
+          <span onclick="togglevisibility('foo')">
+          <div class="dropdown">
+            <h1 style="padding-left:5px;"> <i class="fa fa-bars" aria-hidden="true"></i></h1>
+            <div id="foo" style="display:none;" class="dropdown-content">
+              <p><a href="#about" style="color:#000">Home</a></p>
+              <p><a href="#service" ui-sref="NameSearch" style="color:#000">Search by Name</a></p>
+              <p><a href="#contact" ui-sref="InsuranceSearch" style="color:#000">Search by Name</a></p>
+              <p><a class="item" ng-click="vm.logout()">Log Out</a>
+            </div>
+          </span>
+        </div>
+      </div>
+    </nav>
+
 
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12">
-      <p class="text-center subTitle-home">We Help Find The Right Healthcare For You</p>
+      <p class="text-center subTitle-home">We Help Find The Right Doctor For You!</p>
       <p class="text-center" style="font-size:25px">Find Doctors by specialty</p>
     </div>
   </div>
 <!-- search-->
 <br>
 <div class="text-center">
-  <select class="ui search selection dropdown" input type="text" ng-model="vm.speciality">
+  <select class="ui search selection dropdown mobile" input type="text" ng-model="vm.speciality">
     <option value="">Specialty</option>
     <option value="Acupuncturists">Acupuncturists</option>
     <option value="Allergists">Allergists</option>
@@ -78,13 +98,8 @@
     <option value="Urgent Care Specialists">Urgent Care Specialists</option>
     <option value="Urologists">Urologists</option>
   </select>
-
-
-  <!-- <div class="ui massive icon input">
-    <input type="text" placeholder="Search by Speciality" style="margin-right:20px" class=""
-    ng-model="vm.speciality"> -->
-    <!-- input search states-->
-    <select class="ui selection dropdown" input type="text" ng-model="vm.location">
+  <!-- location search-->
+    <select class="ui selection dropdown mobile" input type="text" ng-model="vm.location">
       <option value="">State</option>
       <option value="AL">Alabama</option>
       <option value="AK">Alaska</option>
@@ -138,14 +153,12 @@
       <option value="WI">Wisconsin</option>
       <option value="WY">Wyoming</option>
     </select>
-    <button type="button" name="button" style="margin-left:20px" class="search ui green button" ng-click="vm.search()">
+    <button type="button" name="button" style="margin-left:20px" class="search ui green button mobile" ng-click="vm.search()">
       <i class="search icon"></i> FIND A DOCTOR
     </button>
-
     </div>
   </div>
 
-<!-- add a loader-->
 <!-- doctor results-->
 <div class="row results">
   <span ng-show="vm.doctorData">
@@ -180,6 +193,8 @@
             </div>
             <div class="extra">
               <div class="ui label">
+                <p> <a href="tel:+1{{vm.doctorData.data[0].practices[0].phones[0].number}}">{{vm.doctorData.data[0].practices[0].phones[0].number}}</a>
+                </p>
                 <p>
                   {{vm.doctorData.data[0].practices[0].visit_address.street}},
                   {{vm.doctorData.data[0].practices[0].visit_address.street2}}
@@ -192,6 +207,7 @@
           </div>
         </div>
       </div>
+      <br>
 
         <div class="col-xs-1 col-sm-1 col-md-1"></div>
         <div class="col-xs-11 col-sm-11 col-md-11">
@@ -201,7 +217,7 @@
                 <img ng-src={{vm.doctorData.data[1].profile.image_url}}>
               </div>
               <div class="content">
-                <a class="header">{{vm.doctorData.data[1].practices[1].name}}</a>
+                <a class="header">{{vm.doctorData.data[1].profile.first_name}} {{vm.doctorData.data[1].profile.last_name}}</a>
                 <p>
                   <strong>
                   {{vm.doctorData.data[1].specialties[0].actor}}
@@ -223,19 +239,21 @@
                 </div>
                 <div class="extra">
                   <div class="ui label">
+                    <p> <a href="tel:{{vm.doctorData.data[1].practices[0].phones[0].number}}">{{vm.doctorData.data[1].practices[0].phones[0].number}}</a>
+
                     <p>
-                      {{vm.doctorData.data[1].practices[1].visit_address.street}},
-                      {{vm.doctorData.data[1].practices[1].visit_address.street2}}
-                      {{vm.doctorData.data[1].practices[1].visit_address.city}},
-                      {{vm.doctorData.data[1].practices[1].visit_address.state}}
-                      {{vm.doctorData.data[1].practices[1].visit_address.zip}}
+                      {{vm.doctorData.data[1].practices[0].visit_address.street}},
+                      {{vm.doctorData.data[1].practices[0].visit_address.street2}}
+                      {{vm.doctorData.data[1].practices[0].visit_address.city}},
+                      {{vm.doctorData.data[1].practices[0].visit_address.state}}
+                      {{vm.doctorData.data[1].practices[0].visit_address.zip}}
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
+          <br>
           <div class="col-xs-1 col-sm-1 col-md-1"></div>
           <div class="col-xs-11 col-sm-11 col-md-11">
             <div class="ui divided items">
@@ -267,19 +285,17 @@
                   <div class="extra">
                     <div class="ui label">
                       <p>
-                        {{vm.doctorData.data[2].practices[0].visit_address.street}},
-                        {{vm.doctorData.data[2].practices[0].visit_address.street2}}
-                        {{vm.doctorData.data[2].practices[0].visit_address.city}},
-                        {{vm.doctorData.data[2].practices[0].visit_address.state}}
-                        {{vm.doctorData.data[2].practices[0].visit_address.zip}}
+                        {{vm.doctorData.data[2].practices[1].visit_address.street}},
+                        {{vm.doctorData.data[2].practices[1].visit_address.street2}}
+                        {{vm.doctorData.data[2].practices[1].visit_address.city}},
+                        {{vm.doctorData.data[2].practices[1].visit_address.state}}
+                        {{vm.doctorData.data[2].practices[1].visit_address.zip}}
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-
 
             <div class="col-xs-1 col-sm-1 col-md-1"></div>
             <div class="col-xs-11 col-sm-11 col-md-11">
@@ -325,8 +341,6 @@
               </div>
           </span>
         </div>
-
-
 
 <!-- add google maps -->
 
