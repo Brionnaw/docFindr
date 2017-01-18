@@ -39,6 +39,7 @@ namespace app.Services {
  export class DoctorService {
    public DoctorResource;
    public NameResource;
+   public InsuranceResource;
    public getDoctor(getInfo) {
      console.log(getInfo)
      return this.DoctorResource.save(getInfo).$promise
@@ -47,13 +48,17 @@ namespace app.Services {
      console.log(getInfo)
      return this.NameResource.save(getInfo).$promise
    }
+   public getInsurance(getInfo) {
+     console.log(getInfo)
+     return this.InsuranceResource.save(getInfo).$promise
+   }
    constructor(
      $resource:ng.resource.IResourceService,
      public $state:ng.ui.IStateService
    ){
      this.DoctorResource = $resource('api/doctor');
      this.NameResource = $resource('api/doctor/name');
-
+     this.InsuranceResource = $resource('api/doctor/insurance');
    }
  }
  angular.module('app').service('userService', UserService);

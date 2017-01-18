@@ -22,6 +22,16 @@ let Name = mongoose.model('Name', {
 });
 
 
+//model
+let Insurance = mongoose.model('Insurance', {
+  Insurance:{
+    Insurance:String,
+    location:String,
+  },
+});
+
+
+
 //Better Doctor api
 router.post('/doctor', function(req, res) {
   let newDoctor = new Doctor ({
@@ -42,7 +52,7 @@ router.post('/doctor', function(req, res) {
   )
   });
 
-  //Better Doctor api
+  //Name Search Better Doctor api
   router.post('/doctor/name', function(req, res) {
     let newName = new Name ({
         firstName:req.body.firstName,
@@ -63,7 +73,25 @@ router.post('/doctor', function(req, res) {
     )
     });
 
-
+    //Name Search Better Doctor api
+    router.post('/doctor/insurance', function(req, res) {
+      let newInsurance = new Insurance ({
+          insurance:req.body.insurance,
+          location:req.body.location,
+      })
+      request('https://api.betterdoctor.com/2016-03-01/doctors?insurance_uid='+req.body.insurance+'&location='+req.body.location+'&user_key=ae582c881648eefe53789f1605e1f2c2',
+          function (error, response, body) {
+            console.log(body)
+            if (!error && response.statusCode == 200)
+             {
+              res.send(response)
+            } else {
+              console.log(error)
+              res.send({message:'search not found'})
+            }
+        }
+      )
+      });
 
 
 

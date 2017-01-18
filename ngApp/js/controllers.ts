@@ -183,10 +183,55 @@ namespace app.Controllers {
              this.user = this.userService.getUser();
        }
      }
-
+     export class InsuranceSearchController {
+       public location;
+       public insurance;
+       public doctorData
+       public user;
+       public id;
+       public payload;
+       public username;
+       public logout(){
+         window.localStorage.removeItem('token');
+         this.$state.go("Login");
+       }
+       public search (){
+         let info = {
+           location:this.location,
+           insurance:this.insurance
+         }
+         console.log(info)
+           this.doctorService.getInsurance(info).then((res) => {
+             if (res.message === 'search not found') {
+              alert(res.message)
+            } else
+              this.doctorData = (JSON.parse(res.body));
+              console.log(res.body)
+          }
+        )
+       }
+       public goToReviews(provider_uid) {
+        console.log(this.$location.url)
+        this.$window.location.href = 'http://www.yelp.com/biz/'+ provider_uid;
+      }
+           constructor(
+             private doctorService: app.Services.DoctorService,
+             private userService: app.Services.UserService,
+             public $state: ng.ui.IStateService,
+             public $window: ng.IWindowService,
+             public $location:ng.ILocationService
+           ) {
+             let token = window.localStorage["token"];
+             let payload = JSON.parse(window.atob(token.split('.')[1]));
+             this.id = payload.id;
+             this.user = this.userService.getUser();
+       }
+     }
   angular.module('app').controller('HomeController', HomeController);
   angular.module('app').controller('LoginController', LoginController);
   angular.module('app').controller('RegisterController', RegisterController);
   angular.module('app').controller('NameSearchController', NameSearchController);
+  angular.module('app').controller('InsuranceSearchController', InsuranceSearchController);
+
 
 }

@@ -4,17 +4,9 @@
         <div class="ui container">
           <div class="ui large secondary inverted pointing menu">
             <a class="item" href="/" style="font-size:20px; margin-right:40px;"> <i class="fa fa-stethoscope"></i> Doc Findr</a>
-        <a class="active item">Home</a>
-        <div class="ui simple dropdown item">
-          Find doctors by
-          <i class="dropdown icon"></i>
-      <div class="menu">
-        <a class="item" ui-sref="NameSearch">Name</a>
-        <a class="item">Specialty</a>
-        <a class="item">Insurance</a>
-      </div>
-    </div>
-        <a class="item" href="">Settings</a>
+        <a class="active item" ui-sref="Home">Home</a>
+        <a class="item" ui-sref="NameSearch">Search by Name</a>
+        <a class="item" ui-sref="InsuranceSearch">Search by Insurance</a>
         <div class="right item">
           <img class="ui avatar image" src="/images/iconuser1.png">
           <a ui-sref="Home">{{vm.user[0].username}}</a>
@@ -146,11 +138,10 @@
       <option value="WI">Wisconsin</option>
       <option value="WY">Wyoming</option>
     </select>
-    <button type="button" name="button" style="margin-left:20px" class="search ui black button" ng-click="vm.search()">
-      <i class="search icon"></i>
+    <button type="button" name="button" style="margin-left:20px" class="search ui green button" ng-click="vm.search()">
+      <i class="search icon"></i> FIND A DOCTOR
     </button>
-    <br>
-    <br><a ui-sref="NameSearch" style="color:#000"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> SEARCH BY NAME </a>
+
     </div>
   </div>
 

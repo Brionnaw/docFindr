@@ -31,6 +31,11 @@ namespace app {
       templateUrl: '/templates/nameSearch.html',
       controller: app.Controllers.NameSearchController,
       controllerAs: 'vm'
+    }).state('InsuranceSearch', {
+      url: '/insuranceSearch',
+      templateUrl: '/templates/insuranceSearch.html',
+      controller: app.Controllers.InsuranceSearchController,
+      controllerAs: 'vm'
     });
 
     $urlRouterProvider.otherwise('/');

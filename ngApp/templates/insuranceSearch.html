@@ -4,11 +4,10 @@
         <div class="ui container">
           <div class="ui large secondary inverted pointing menu">
             <a class="item" href="/" style="font-size:20px; margin-right:40px;"> <i class="fa fa-stethoscope"></i> Doc Findr</a>
-    <a class="item" ui-sref="Home">Home</a>
-    <a class="active item" ui-sref="NameSearch">Search by Name</a>
-    <a class="item" ui-sref="Home">Search by Specialty</a>
-    <a class="item" ui-sref="InsuranceSearch">Search by Insurance</a>
-
+        <a class="item" ui-sref="Home">Home</a>
+        <a class="item" ui-sref="NameSearch">Search by Name</a>
+        <a class="item" ui-sref="Home">Search by Specialty</a>
+        <a class="active item" ui-sref="InsuranceSearch">Search by Insurance</a>
         <div class="right item">
           <img class="ui avatar image" src="/images/iconuser1.png">
           <a ui-sref="Home">{{vm.user[0].username}}</a>
@@ -20,21 +19,69 @@
 
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12">
-      <p class="text-center subTitle-home">We Help Find The Right Doctor For You</p>
-      <p class="text-center" style="font-size:25px">Find Doctors by name</p>
+      <p class="text-center subTitle-home">We Help Find The Right Healthcare For You!</p>
+      <p class="text-center" style="font-size:25px">Find Doctors by insurance providers</p>
     </div>
   </div>
-
   <!-- search-->
   <br>
   <div class="text-center">
-    <div class="ui input focus">
-      <input type="text" placeholder="Enter first name" style="margin-right:20px" ng-model="vm.firstName">
-    </div>
-    <div class="ui input focus">
-      <input type="text" placeholder="Enter last name" style="margin-right:20px" ng-model="vm.lastName">
-    </div>
+    <select class="ui search selection dropdown" input type="text" ng-model="vm.insurance">
+      <option value="">Insurance providers</option>
+      <option value="amerihealth-amerihealthlocalvaluenetworkepoposppo">Amerihealth Local Value Network EPO POS PPO</option>
+      <option value="amerihealth-amerihealthregionalprefntwkhmohmopos">Amerihealth Regional Pref Ntwk HMO HMO POS</option>
+      <option value="anthem-anthemblueaccessppo">Anthem Blue Access PPO</option>
+      <option value="anthem-anthemblueopenaccesspos">Anthem Blue Open Access POS</option>
+      <option value="anthem-anthemcobluepriorityppo">Anthem CO Blue Priority PPO</option>
+      <option value="anthem-anthempathwayxindppodirectaccessct">Anthem Pathway X Ind PPO Direct Access CT</option>
+      <option value="anthem-anthemkeycareppo">Anthem KeyCare PPO</option>
+      <option value="anthem-anthempathwayxenhancedinddirectaccessnh">Anthem Pathway X EnhancedInd Direct Access NH</option>
+      <option value="anthem-anthemohpathwayxtieredhospinddirectaccess">Anthem OH Pathway X Tiered HospInd Direct Access</option>
+      <option value="anthem-anthembluepreferredhmo">Anthem Blue Preferred HMO</option>
+      <option value="anthem-anthemcopathwayxenhancedinddirectaccess">Anthem CO Pathway X Enhanced Ind Direct Access</option>
+      <option value="anthem-antheminpathwayxbronzedirectcacahix">Anthem IN Pathway X Bronze Direct CACA HIX</option>
+      <option value="anthembluecrossblueshield-bronzedirectaccessplusgjqa">Bronze DirectAccess Plus - gjqa</option>
+      <option value="anthem-anthembluepreferredpluspos">Anthem Blue Preferred Plus POS</option>
+      <option value="anthembluecrossblueshield-golddirectaccesspluswhs">Gold DirectAccess Plus with HSA</option>
+      <option value="anthem-anthemmodirectaccesswhsa">Anthem MO Direct Access wHSA</option>
+      <option value="anthem-blueviewvision">Anthem Blue View Vision</option>
+      <option value="anthem-anthempathwayxenhancedindguidedaccessme">Anthem Pathway X EnhancedInd Guided Access ME</option>
+      <option value="anthem-anthemwibluepriorityxindivdirectaccess">Anthem WI Blue Priority XIndiv DirectAccess</option>
+      <option value="anthem-anthemppocenturypreferredct">Anthem PPO Century Preferred - CT</option>
+      <option value="altiuscoventryhealthcare-altiusproviderdirectory">Altius Provider Directory</option>
+      <option value="bluecrosscalifornia-bluecrosscapathwayxppodirectaccess">Blue Cross CA Pathway X PPO Direct Access</option>
+      <option value="bluecrossblueshieldofmassachusetts">Blue Cross Blue Shield of Massachusetts</option>
+      <option value="blueshieldofcalifornia-blueshieldcabasicppo">Blue Shield CA Basic PPO</option>
+      <option value="bluecrossblueshieldofmassachusetts-bcbsmahmobluewithmanagedcarebehavioralhealth">BCBS MA HMO Blue with Managed Care Behavioral Health</option>
+      <option value="bluecrossblueshieldofmassachusetts-bcbsmapreferredblueppo">BCBS MA Preferred Blue PPO</option>
+      <option value="bluecrosscalifornia-bccadentalblue100200300">BCBS MA Preferred Blue PPO</option>
+      <option value="bluecrosscalifornia-bluecrosscaadvantageppopreferreddirectaccessplus">Blue Cross CA Advantage PPO Preferred DirectAccess Plus</option>
+      <option value="bluecrosscalifornia-bluecrosscappo">Blue Cross CA PPO</option>
+      <option value="bluecrosscalifornia-bluecrosscapriorityselecthmo">Blue Cross CA Priority Select HMO</option>
+      <option value="bluecrosscalifornia-bluecrosscaselectplushmo">Blue Cross CA Select Plus HMO</option>
+      <option value="bluecrosscalifornia-bluecrosscapowerselecthmo">Blue Cross CA PowerSelect HMO</option>
+      <option value="bluecrosscalifornia-bluecrosscaselectppo">Blue Cross CA Select PPO</option>
+      <option value="bluecrosscalifornia-bluecrosscacaliforniacarehmo">Blue Cross CA CaliforniaCare HMO</option>
+      <option value="bluecrosscalifornia-bluecrosscapathwayxhmoguidedaccess">Blue Cross CA Pathway X HMO Guided Access</option>
+      <option value="blueshieldofcalifornia">Blue Shield of California</option>
+      <option value="blueshieldofcalifornia-bscadentalppo">BS CA Dental PPO</option>
+      <option value="carefirstbluecrossblueshield-carefirstbluechoicentwkpos">CareFirst BlueChoice Ntwk POS</option>
+      <option value="carefirstbluecrossblueshield-carefirstregionalpreferreddentalppo">CareFirst Regional Preferred Dental PPO</option>
+      <option value="carefirstbluecrossblueshield-carefirstbluechoicentwkpos">CareFirst BlueChoice Ntwk POS</option>
+      <option value="carefirstbluecrossblueshield-carefirstbluechoiceadvantage">CareFirst BlueChoice Advantage</option>
+      <option value="carefirstbluecrossblueshield-carefirstregionaltraditionaldental">Coventry HealthAmerica HMO</option>
+      <option value="coventryhealthcare-coventryhealthcareofvahmo">Coventry Health Care of VA HMO</option>
+      <option value="coventryhealthcare-coventrywellpathpreferredppo">Coventry Wellpath Preferred PPO</option>
+      <option value="healthalliance-healthallianceppo">Health Alliance PPO</option>
+      <option value="healthalliance-healthalliancehmopos">Health Alliance HMOPOS</option>
 
+
+    </select>
+
+
+    <!-- <div class="ui massive icon input">
+      <input type="text" placeholder="Search by Speciality" style="margin-right:20px" class=""
+      ng-model="vm.speciality"> -->
       <!-- input search states-->
       <select class="ui selection dropdown" input type="text" ng-model="vm.location">
         <option value="">State</option>
@@ -93,16 +140,14 @@
       <button type="button" name="button" style="margin-left:20px" class="search ui green button" ng-click="vm.search()">
         <i class="search icon"></i> FIND A DOCTOR
       </button>
-        </div>
-      </div>
-    </div>
+
 
   <!-- add a loader-->
   <!-- doctor results-->
   <div class="row results">
     <span ng-show="vm.doctorData">
       <h1 class="text-center header">Results</h1>
-      <p class="text-center header2"> Showing results for {{vm.firstName}} {{vm.lastName}} in "{{vm.location}}"</p>
+      <p class="text-center header2"> Showing results in "{{vm.location}}"</p>
       <div class="col-xs-1 col-sm-1 col-md-1"></div>
       <div class="col-xs-11 col-sm-11 col-md-11">
         <div class="ui divided items">
@@ -111,7 +156,7 @@
               <img ng-src={{vm.doctorData.data[0].profile.image_url}}>
             </div>
             <div class="content">
-              <a class="header">{{vm.doctorData.data[0].practices[1].name}}</a>
+              <a class="header">{{vm.doctorData.data[0].practices[0].name}}</a>
               <p>
                 <strong>
                 {{vm.doctorData.data[0].specialties[0].actor}}
@@ -133,11 +178,11 @@
               <div class="extra">
                 <div class="ui label">
                   <p>
-                    {{vm.doctorData.data[0].practices[1].visit_address.street}},
-                    {{vm.doctorData.data[0].practices[1].visit_address.street2}}
-                    {{vm.doctorData.data[0].practices[1].visit_address.city}},
-                    {{vm.doctorData.data[0].practices[1].visit_address.state}}
-                    {{vm.doctorData.data[0].practices[1].visit_address.zip}}
+                    {{vm.doctorData.data[0].practices[0].visit_address.street}},
+                    {{vm.doctorData.data[0].practices[0].visit_address.street2}}
+                    {{vm.doctorData.data[0].practices[0].visit_address.city}},
+                    {{vm.doctorData.data[0].practices[0].visit_address.state}}
+                    {{vm.doctorData.data[0].practices[0].visit_address.zip}}
                   </p>
                 </div>
               </div>
