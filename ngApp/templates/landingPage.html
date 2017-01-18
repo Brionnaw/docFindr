@@ -1,5 +1,5 @@
 <!-- NAV SECTION (desktop/tablet)-->
-   <!-- <nav class="navbar navbar-default navbar-fixed-top hidden-xs">
+ <!-- <nav class="navbar navbar-default navbar-fixed-top hidden-xs">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" ui-sref="#"><i class="fa fa-stethoscope"></i> Doc Findr</a>
@@ -33,16 +33,13 @@
 <!-- title(desktop)-->
 <div class="row background">
   <div class="col-xs-12 col-sm-12 col-md-12">
-    <p class="text-center title">
-      <!-- <i class="fa fa-stethoscope"></i> Doc Findr</p> -->
-      <p class="text-center subTitle">
-        find nearby doctors in your network
+       <p class="text-center subTitle">
+        Find nearby doctors in your network
       </p>
     </div>
-
 <!-- search-->
   <div class="text-center">
-   <div class="ui massive input">
+   <!-- <div class="ui massive input">
      <select class=" ui search selection dropdown" input type="text" ng-model="vm.speciality" style="margin-right:20px">
        <option value="">Speciality</option>
        <option value="Acupuncturists">Acupuncturists</option>
@@ -95,9 +92,9 @@
        <option value="Travel Medicine Specialists">Travel Medicine Specialists</option>
        <option value="Urgent Care Specialists">Urgent Care Specialists</option>
        <option value="Urologists">Urologists</option>
-     </select>
+     </select> -->
      <!-- location-->
-     <select class="ui selection dropdown" input type="text" ng-model="vm.location">
+     <!-- <select class="ui selection dropdown" input type="text" ng-model="vm.location">
        <option value="">State</option>
        <option value="AL">Alabama</option>
        <option value="AK">Alaska</option>
@@ -152,19 +149,19 @@
        <option value="WY">Wyoming</option>
      </select>
    </div>
-   <br>
-   <br>
-   <div class="field">
+   <br> -->
+   <!-- <br> -->
+   <!-- <div class="field">
   <button type="button" name="button" class="search ui black massive button"  ng-click="vm.search()">
     <div class="visible content"> <i class="search icon"></i>Find a doctor </div>
   </button>
-</div>
+</div> --> -->
 </div>
 </div>
 </div>
 <!-- doctor results-->
 <!-- add a loader-->
-<div class="row results">
+<!-- <div class="row results">
   <span ng-show="vm.doctorData">
     <h1 class="text-center header">Results</h1>
     <p class="text-center header2"> Showing results for {{vm.speciality}} in "{{vm.location}}"</p>
@@ -301,18 +298,27 @@
 
 
         <!-- SERVICES -->
-        <span ng-hide="vm.doctorData">
+          <br>
+
+          <div class="ui vertical stripe quote segment">
+             <div class="ui equal width stackable internally celled grid">
+               <div class="center aligned row">
+                 <div class="column">
+              <h1>Achoo? Fever? Find a doctor.</h1>
+              <img src="images/couplesick.jpg" height="300px" width="500px" alt="">
+              <img src="/images/Woman-with-thermometer.jpg" height="300px" width="500px" alt="">
+            </div>
+          </div>
+          </div>
+          </div>
+
+
         <h1 class="ui header text-center" id="about">Discover the best doctors in your network!</h1>
         <center><p><b>Doc Findr</b> provides you with basic professional information on licensed physician in the United States.</p></center>
         <div class="ui vertical stripe segment">
           <div class="ui middle aligned stackable grid container">
             <div class="row">
-              <!-- <div class="eight wide column">
-        <h3 class="ui header">We Help Find The Right Healthcare For You.</h3>
-        <p>DoctorFindr provides you with basic professional information on licensed physician in the United States.</p>
-        <h3 class="ui header">We Make Bananas That Can Dance</h3>
-        <p>Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.</p>
-      </div> -->
+
       <div class="four wide right floated column">
         <img src="/images/Screen Shot 2017-01-10 at 11.08.12 PM.png" class="ui large bordered rounded image">
       </div>
@@ -338,7 +344,8 @@
         <div class="column">
           <h1><i class="fa fa-search fa-lg" aria-hidden="true"></i></h1>
           <h3> Real Data Information</h3>
-          <p>You can easily search for doctors by name, location, specialty, and insurances. Using the Doc Findr database, you can improve your healthcare by finding the right doctor.</p>
+          <p>You can easily search for doctors by name, location, specialty, and insurances.
+            <br>Using the Doc Findr database, you can improve your healthcare by finding the right doctor.</p>
         <center>  <img src="/images/doctorprofile.png" class="ui large bordered rounded image"></center>
         </div>
         <div class="column">
@@ -366,4 +373,3 @@
   </div>
   </div>
   </div>
-</span>

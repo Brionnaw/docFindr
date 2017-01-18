@@ -278,6 +278,51 @@
                 </div>
               </div>
             </div>
+
+
+
+            <div class="col-xs-1 col-sm-1 col-md-1"></div>
+            <div class="col-xs-11 col-sm-11 col-md-11">
+              <div class="ui divided items">
+                <div class="item">
+                  <div class="image">
+                    <img ng-src={{vm.doctorData.data[3].profile.image_url}} >
+                  </div>
+                  <div class="content">
+                    <a class="header">{{vm.doctorData.data[3].practices[0].name}}</a>
+                    <p>
+                      <strong>
+                      {{vm.doctorData.data[3].specialties[0].actor}}
+                    </strong>
+                  </p>
+                    <div class="meta">
+                      <span class="image">
+                        <p>
+                            <a ng-click=vm.goToReviews(vm.doctorData.data[3].ratings[1].provider_uid)>
+                          <img ng-src={{vm.doctorData.data[3].ratings[0].image_url_small}}>
+                        </a>
+                        </p>
+                      </span>
+                    </div>
+                    <div class="description">
+                      <p> {{vm.doctorData.data[3].specialties[0].description}}</p>
+                         <p>{{vm.doctorData.data[3].profile.bio}}</p>
+                      </div>
+                    </div>
+                    <div class="extra">
+                      <div class="ui label">
+                        <p>
+                          {{vm.doctorData.data[3].practices[0].visit_address.street}},
+                          {{vm.doctorData.data[3].practices[0].visit_address.street2}}
+                          {{vm.doctorData.data[3].practices[0].visit_address.city}},
+                          {{vm.doctorData.data[3].practices[0].visit_address.state}}
+                          {{vm.doctorData.data[3].practices[0].visit_address.zip}}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </span>
         </div>
 
